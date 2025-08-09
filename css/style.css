@@ -85,6 +85,11 @@ section#landing .hero-content h1 {
 
 section#landing .hero-content img {
   width: 3rem;
+  transition: transform 0.3s;
+}
+
+section#landing .hero-content img:hover {
+  transform: rotate(30deg);
 }
 
 section#landing .hero-nav {
@@ -399,6 +404,7 @@ section#contact > .container {
 
 section#contact .contact-header h1 {
   font-size: 6rem;
+  color: var(--ice-blue);
 }
 
 section#contact .contact-header div {
