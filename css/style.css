@@ -84,6 +84,19 @@ section#landing .hero-content {
 section#landing .hero-content h1 {
   font-size: 8em;
   letter-spacing: 0.5rem;
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 section#landing .hero-content div.asterisk-fat {
@@ -289,6 +302,7 @@ section#about .about-content {
 
 section#about .about-content > div > .about-image {
   flex-basis: 450px;
+  flex-shrink: 0; /* FIXME: not shrinking? */
 }
 
 section#about .about-description {
@@ -430,6 +444,22 @@ section#projects .projects-card {
 section#projects .projects-card img {
   width: 100%;
   height: auto;
+}
+
+.image-container {
+  width: 800px;
+  height: auto;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
 }
 
 section#projects .projects-info {
