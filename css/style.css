@@ -395,6 +395,15 @@ section#contact .contact-socials footer {
   gap: 0.5rem;
 }
 
+.email-container #copy-email-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.email-container:hover #copy-email-btn {
+  opacity: 1;
+}
+
 /* Swipe Transition */
 .swipe-transition-1,
 .swipe-transition-2 {

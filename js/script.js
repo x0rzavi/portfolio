@@ -21,4 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1200); // Remove class after animation is complete
     });
   });
+
+  const emailContainer = document.querySelector('.email-container');
+  const copyBtn = document.getElementById('copy-email-btn');
+  const emailAddress = document.getElementById('email-address');
+
+  if (emailContainer) {
+    emailContainer.addEventListener('click', () => {
+      navigator.clipboard.writeText(emailAddress.innerText)
+        .then(() => {
+          copyBtn.innerText = 'COPIED!';
+          setTimeout(() => {
+            copyBtn.innerText = 'COPY';
+          }, 2000); // Revert back after 2 seconds
+        })
+        .catch(err => {
+          console.error('Failed to copy text: ', err);
+        });
+    });
+  }
 });
