@@ -50,11 +50,20 @@ body {
     sans-serif;
 }
 
+section {
+  /* make each section cover full page */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+}
+
 section#landing > .container {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 4rem;
+  padding: 6rem;
   background-color: var(--white);
 }
 
@@ -260,9 +269,12 @@ section#about .skills-category li img {
   padding-bottom: 0.2rem; /* HACK: debug middle baseline */
 }
 
-section#projects > .container {
+section#projects {
   background-color: var(--dark-grey);
   color: var(--pastel-orange);
+}
+
+section#projects > .container {
   padding: 2rem 4rem;
 }
 
@@ -320,9 +332,12 @@ section#projects .projects-year {
   margin-left: auto;
 }
 
-section#contact > .container {
+section#contact {
   background-color: var(--dark-grey);
   color: var(--pastel-orange);
+}
+
+section#contact > .container {
   display: flex;
   flex-direction: column;
   padding: 2rem 4rem;
@@ -405,7 +420,7 @@ body.is-transitioning .swipe-transition-1 {
 }
 
 body.is-transitioning .swipe-transition-2 {
-  animation: swipe-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards; /* 0.1s delay */
+  animation: swipe-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards;
 }
 
 @keyframes swipe-up {
