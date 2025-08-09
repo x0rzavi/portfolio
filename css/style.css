@@ -97,6 +97,7 @@ section#landing .hero-nav {
 section#landing .hero-nav a {
   color: var(--dark-grey);
   transition: color 0.3s;
+  position: relative;
 }
 
 section#landing .hero-nav li {
@@ -104,6 +105,23 @@ section#landing .hero-nav li {
   align-items: center;
   font-size: 2rem;
   gap: 0.8rem;
+}
+
+section#landing .hero-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+section#landing .hero-nav li:hover a::after {
+  transform: scaleX(1);
 }
 
 section#landing .hero-nav li img {
