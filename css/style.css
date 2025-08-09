@@ -84,7 +84,7 @@ section#landing .hero-content {
 section#landing .hero-content h1 {
   font-size: 8em;
   letter-spacing: 0.5rem;
-  animation: fadeInUp 0.5s ease-in-out forwards;
+  animation: fadeInUp 1s ease-in-out forwards;
 }
 
 @keyframes fadeInUp {
@@ -447,7 +447,7 @@ section#projects .projects-card img {
 }
 
 .image-container {
-  width: 800px;
+  width: 100%; /* take as much space as possible, but show 2 cards */
   height: auto;
   overflow: hidden;
 }
