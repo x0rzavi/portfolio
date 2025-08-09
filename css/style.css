@@ -197,6 +197,31 @@ section#about .about-content {
   padding: 0 6rem;
 }
 
+/* About me image hover effect */
+.about-image-container {
+  position: relative;
+  flex-basis: 450px;
+  width: 450px;
+}
+
+.about-image-container .about-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-image-container .about-image.color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.about-image-container:hover .about-image.color {
+  opacity: 1;
+}
+
 section#about .about-content > div > .about-image {
   flex-basis: 450px;
 }
