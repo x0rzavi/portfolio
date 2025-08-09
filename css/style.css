@@ -228,7 +228,7 @@ section#about .skills-category h3 {
   font-size: 1.5rem;
 }
 
-section#about .skills-category img {
+section#about .skills-category div > img {
   width: 1.5rem;
   padding-bottom: 0.4rem; /* HACK: debug middle baseline */
 }
@@ -248,6 +248,14 @@ section#about .skills-category ul .horizontal-line {
 
 section#about .skills-category li {
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section#about .skills-category li img {
+  width: 2rem;
+  padding-bottom: 0.2rem; /* HACK: debug middle baseline */
 }
 
 section#projects > .container {
