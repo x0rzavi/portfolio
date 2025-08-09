@@ -40,4 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
   }
+
+  const colorInvertBtn = document.getElementById('color-invert-btn');
+  if (colorInvertBtn) {
+    colorInvertBtn.addEventListener('click', () => {
+      document.body.classList.toggle('inverted');
+    });
+  }
 });

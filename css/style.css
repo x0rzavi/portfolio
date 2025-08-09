@@ -16,6 +16,7 @@
 
 :root {
   --dark-grey: #272628;
+  --darkish-grey: #313131;
   --light-grey: #dddddd;
   --pastel-orange: #ffcb7d;
   --ice-blue: #99c5ff;
@@ -56,7 +57,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--white);
 }
 
 section#landing > .container {
@@ -64,7 +64,11 @@ section#landing > .container {
   flex-direction: column;
   gap: 4rem;
   padding: 6rem;
+  color: var(--dark-grey);
   background-color: var(--white);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 section#landing .hero-content {
@@ -77,7 +81,6 @@ section#landing .hero-content {
 section#landing .hero-content h1 {
   font-size: 8em;
   letter-spacing: 0.5rem;
-  color: var(--dark-grey);
 }
 
 section#landing .hero-content img {
@@ -93,6 +96,7 @@ section#landing .hero-nav {
 
 section#landing .hero-nav a {
   color: var(--dark-grey);
+  transition: color 0.3s;
 }
 
 section#landing .hero-nav li {
@@ -255,6 +259,7 @@ section#about .skills-category ul .horizontal-line {
   height: 3px;
   width: 90%;
   background-color: var(--light-grey);
+  transition: background-color 0.3s;
 }
 
 section#about .skills-category li {
@@ -472,4 +477,21 @@ body.is-transitioning .swipe-transition-2 {
   100% {
     top: -100%;
   }
+}
+
+/* Color Inversion Styles */
+body.inverted section#landing > .container,
+body.inverted section#about > .container {
+  /* FIXME: different sections changing at different speeds */
+  background-color: var(--dark-grey);
+  color: var(--ice-blue);
+}
+
+body.inverted section#landing .hero-nav a {
+  color: var(--ice-blue);
+}
+
+body.inverted section#about .skills-category ul .horizontal-line {
+  background-color: var(--darkish-grey);
+  transition: background-color 0.2s;
 }
