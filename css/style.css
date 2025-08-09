@@ -318,8 +318,13 @@ section#about .skills-category li img {
 }
 
 section#projects {
-  background-color: var(--dark-grey);
+  background-color: var(--white);
   color: var(--pastel-orange);
+  transition: background-color 0.6s;
+}
+
+section#projects.projects-visible {
+  background-color: var(--dark-grey);
 }
 
 section#projects > .container {
@@ -528,6 +533,10 @@ body.inverted section#about > .container {
   /* FIXME: different sections changing at different speeds */
   background-color: var(--dark-grey);
   color: var(--ice-blue);
+}
+
+body.inverted section#projects {
+  background-color: var(--dark-grey);
 }
 
 body.inverted section#landing .hero-nav a {
