@@ -16,9 +16,11 @@
 
 :root {
   --dark-grey: #272628;
+  --light-grey: #dddddd;
   --pastel-orange: #ffcb7d;
   --white: #f6efed;
   --status-pulse-green: #00bf63;
+  /* font-size: 75%; */
 }
 
 * {
@@ -49,7 +51,7 @@ body {
 section#landing > .container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
   padding: 4rem;
   background-color: var(--white);
 }
@@ -63,37 +65,42 @@ section#landing .hero-content {
 
 section#landing .hero-content h1 {
   font-size: 8em;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.5rem;
   color: var(--dark-grey);
 }
 
 section#landing .hero-content img {
-  width: 2.5rem;
-  color: var(--dark-grey);
+  width: 3rem;
 }
 
 section#landing .hero-nav {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
   list-style: none;
-  font-size: 2rem;
+}
+
+section#landing .hero-nav a {
+  color: var(--dark-grey);
 }
 
 section#landing .hero-nav li {
   display: flex;
-  align-items: center; /* FIXME: have middle baseline */
+  align-items: center;
+  font-size: 2rem;
+  gap: 0.8rem;
 }
 
 section#landing .hero-nav li img {
   width: 2rem;
-  padding-right: 0.8rem;
+  padding-bottom: 0.3rem; /* HACK: debug middle baseline */
 }
 
 section#landing .hero-status {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5rem;
 }
 
 .scroll-down {
@@ -105,6 +112,7 @@ section#landing .hero-status div {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-shrink: 0;
 }
 
 .status-pulse {
@@ -161,19 +169,21 @@ section#landing .hero-status div {
 section#about > .container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: 4rem 12rem;
+  gap: 4rem;
+  padding: 2rem 4rem;
   background-color: var(--white);
 }
 
 section#about .about-content {
   display: flex;
+  justify-content: center;
   gap: 8rem;
   flex-wrap: wrap;
+  padding: 0 6rem;
 }
 
 section#about .about-content > div > .about-image {
-  flex-basis: 400px;
+  flex-basis: 450px;
 }
 
 section#about .about-description {
@@ -197,7 +207,7 @@ section#about .about-skills {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
-  padding: 2rem 0;
+  padding: 0 6rem 6rem;
   justify-content: space-between;
 }
 
@@ -208,22 +218,154 @@ section#about .skills-category {
   flex: auto;
 }
 
+section#about .skills-category > div {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
 section#about .skills-category h3 {
-  font-size: 2rem;
-  border: 0.2rem solid var(--dark-grey);
-  padding: 0.6rem 1.8rem; /* pill look */
-  border-radius: 20rem; /* pill look */
-  text-align: center;
+  font-size: 1.5rem;
+}
+
+section#about .skills-category img {
+  width: 1.5rem;
+  padding-bottom: 0.4rem; /* HACK: debug middle baseline */
 }
 
 section#about .skills-category ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+section#about .skills-category ul .horizontal-line {
+  height: 3px;
+  width: 90%;
+  background-color: var(--light-grey);
 }
 
 section#about .skills-category li {
+  font-size: 1.5rem;
+}
+
+section#projects > .container {
+  background-color: var(--dark-grey);
+  color: var(--pastel-orange);
+  padding: 2rem 4rem;
+}
+
+section#projects .projects-header {
   display: flex;
-  align-items: center; /* FIXME: have middle baseline */
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 6rem;
+}
+
+section#projects .projects-link {
+  display: flex;
+  align-items: center;
   gap: 0.5rem;
   font-size: 2rem;
-  padding: 0.3rem 0;
+}
+
+section#projects .projects-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  width: 100%;
+}
+
+section#projects .projects-card-container:first-child {
+  padding-bottom: 6rem;
+}
+
+section#projects .projects-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1 1 45%; /* take as much space as possible, but show 2 cards */
+}
+
+section#projects .projects-card img {
+  width: 100%;
+  height: auto;
+}
+
+section#projects .projects-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+section#projects .projects-name {
+  border: 0.2rem solid var(--pastel-orange);
+  padding: 0.6rem 1.8rem; /* pill look */
+  border-radius: 20rem; /* pill look */
+}
+
+section#projects .projects-year {
+  margin-left: auto;
+}
+
+section#contact > .container {
+  background-color: var(--dark-grey);
+  color: var(--pastel-orange);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  gap: 16rem;
+}
+
+section#contact .contact-header h1 {
+  font-size: 6rem;
+}
+
+section#contact .contact-header div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+section#contact .contact-header div > button {
+  border: 0.2rem solid var(--pastel-orange);
+  padding: 0.6rem 1.8rem; /* pill look */
+  border-radius: 20rem; /* pill look */
+  background-color: var(--dark-grey);
+  color: var(--pastel-orange);
+  font-size: 1.2rem;
+}
+
+section#contact .contact-socials {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+section#contact .contact-socials div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section#contact .contact-socials a {
+  color: var(--pastel-orange);
+}
+
+section#contact .contact-socials img {
+  width: 1.8rem;
+  padding-bottom: 0.2rem; /* HACK: debug middle baseline */
+}
+
+section#contact .contact-socials footer {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
