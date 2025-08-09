@@ -62,7 +62,7 @@ section {
   transition: background-color 0.3s;
 }
 
-section#landing > .container {
+section#landing .container {
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -99,7 +99,7 @@ section#landing .hero-content h1 {
   }
 }
 
-section#landing .hero-content div.asterisk-fat {
+section#landing .hero-content .asterisk-fat {
   background-color: var(--dark-grey);
   width: 10rem;
   aspect-ratio: 1/1;
@@ -110,6 +110,9 @@ section#landing .hero-content div.asterisk-fat {
 
   -webkit-mask-image: url("../assets/asterisk-fat.svg");
   mask-image: url("../assets/asterisk-fat.svg");
+}
+
+.masked-icon {
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -118,7 +121,7 @@ section#landing .hero-content div.asterisk-fat {
   mask-position: center;
 }
 
-section#landing .hero-content div.asterisk-fat:hover {
+section#landing .hero-content .asterisk-fat:hover {
   transform: rotate(30deg);
 }
 
@@ -129,17 +132,17 @@ section#landing .hero-nav {
   list-style: none;
 }
 
-section#landing .hero-nav a {
-  color: var(--dark-grey);
-  transition: color 0.3s;
-  position: relative;
-}
-
 section#landing .hero-nav li {
   display: flex;
   align-items: center;
   font-size: 2rem;
   gap: 0.8rem;
+}
+
+section#landing .hero-nav a {
+  color: var(--dark-grey);
+  transition: color 0.3s;
+  position: relative;
 }
 
 section#landing .hero-nav a::after {
@@ -159,7 +162,7 @@ section#landing .hero-nav li:hover a::after {
   transform: scaleX(1);
 }
 
-section#landing .hero-nav li div.asterisk-thin {
+section#landing .hero-nav .asterisk-thin {
   background-color: var(--dark-grey);
   width: 1.5rem;
   aspect-ratio: 1/1;
@@ -168,12 +171,6 @@ section#landing .hero-nav li div.asterisk-thin {
 
   -webkit-mask-image: url("../assets/asterisk-thin.svg");
   mask-image: url("../assets/asterisk-thin.svg");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
 }
 
 section#landing .hero-status {
@@ -184,20 +181,15 @@ section#landing .hero-status {
 }
 
 .scroll-down {
+  /* for all scroll down indicators */
   background-color: var(--dark-grey);
   width: 4rem;
-  margin-left: -0.6rem; /* HACK: not aligning with left margin */
+  margin-left: -1rem; /* HACK: not aligning with left margin */
   aspect-ratio: 1/1;
   transition: background-color 0.3s;
 
   -webkit-mask-image: url("../assets/scroll-down.svg");
   mask-image: url("../assets/scroll-down.svg");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
 }
 
 section#landing .hero-status div {
@@ -219,7 +211,7 @@ section#landing .hero-status div {
     infinite;
 }
 
-/* The outer ripple effect */
+/* Outer ripple effect */
 .status-pulse::before {
   content: "";
   position: absolute;
@@ -259,7 +251,7 @@ section#landing .hero-status div {
   }
 }
 
-section#about > .container {
+section#about .container {
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -276,19 +268,19 @@ section#about .about-content {
 }
 
 /* About me image hover effect */
-.about-image-container {
+section#about .about-image-container {
   position: relative;
-  flex-basis: 450px;
+  flex-shrink: 0;
   width: 450px;
 }
 
-.about-image-container .about-image {
+section#about .about-image-container .about-image {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.about-image-container .about-image.color {
+section#about .about-image-container .about-image.color {
   position: absolute;
   top: 0;
   left: 0;
@@ -296,13 +288,8 @@ section#about .about-content {
   transition: opacity 0.3s ease-in-out;
 }
 
-.about-image-container:hover .about-image.color {
+section#about .about-image-container:hover .about-image.color {
   opacity: 1;
-}
-
-section#about .about-content > div > .about-image {
-  flex-basis: 450px;
-  flex-shrink: 0; /* FIXME: not shrinking? */
 }
 
 section#about .about-description {
@@ -318,7 +305,7 @@ section#about .about-description {
 section#about .skills-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
   align-self: flex-end;
 }
 
@@ -337,17 +324,17 @@ section#about .skills-category {
   flex: auto;
 }
 
-section#about .skills-category > div {
+section#about .skills-category div {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
 
-section#about .skills-category h3 {
+section#about .skills-category div h3 {
   font-size: 1.5rem;
 }
 
-section#about .skills-category div.asterisk-fat {
+section#about .skills-category .asterisk-fat {
   background-color: var(--dark-grey);
   width: 1.5rem;
   aspect-ratio: 1/1;
@@ -356,12 +343,6 @@ section#about .skills-category div.asterisk-fat {
 
   -webkit-mask-image: url("../assets/asterisk-fat.svg");
   mask-image: url("../assets/asterisk-fat.svg");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
 }
 
 section#about .skills-category ul {
@@ -371,7 +352,7 @@ section#about .skills-category ul {
   gap: 0.5rem;
 }
 
-section#about .skills-category ul .horizontal-line {
+section#about .skills-category .horizontal-line {
   height: 3px;
   max-width: 50%; /* FIXME: size extending too much */
   background-color: var(--light-grey);
@@ -400,7 +381,7 @@ section#projects.projects-visible {
   background-color: var(--dark-grey);
 }
 
-section#projects > .container {
+section#projects .container {
   padding: 2rem 4rem;
 }
 
@@ -441,24 +422,19 @@ section#projects .projects-card {
   flex: 1 1 45%; /* take as much space as possible, but show 2 cards */
 }
 
-section#projects .projects-card img {
-  width: 100%;
-  height: auto;
-}
-
-.image-container {
+section#projects .image-container {
   width: 100%; /* take as much space as possible, but show 2 cards */
   height: auto;
   overflow: hidden;
 }
 
-.image-container img {
+section#projects .image-container img {
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease-out;
 }
 
-.image-container:hover img {
+section#projects .image-container:hover img {
   transform: scale(1.05);
 }
 
@@ -483,7 +459,7 @@ section#contact {
   color: var(--pastel-orange);
 }
 
-section#contact > .container {
+section#contact .container {
   display: flex;
   flex-direction: column;
   padding: 2rem 4rem;
@@ -504,13 +480,23 @@ section#contact .contact-header div {
   padding-top: 1rem;
 }
 
-section#contact .contact-header div > button {
+section#contact .contact-header #copy-email-btn {
   border: 0.2rem solid var(--pastel-orange);
   padding: 0.6rem 1.8rem; /* pill look */
   border-radius: 20rem; /* pill look */
   background-color: var(--dark-grey);
   color: var(--pastel-orange);
   font-size: 1.2rem;
+}
+
+/* Dynamic email copy button */
+section#contact .email-container #copy-email-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+section#contact .email-container:hover #copy-email-btn {
+  opacity: 1;
 }
 
 section#contact .contact-socials {
@@ -520,7 +506,7 @@ section#contact .contact-socials {
   padding-bottom: 2rem;
 }
 
-section#contact .contact-socials div {
+section#contact .contact-socials > div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -530,7 +516,7 @@ section#contact .contact-socials a {
   color: var(--pastel-orange);
 }
 
-section#contact .contact-socials div.asterisk-fat {
+section#contact .contact-socials .asterisk-fat {
   background-color: var(--ice-blue);
   width: 1.8rem;
   aspect-ratio: 1/1;
@@ -538,35 +524,6 @@ section#contact .contact-socials div.asterisk-fat {
 
   -webkit-mask-image: url("../assets/asterisk-fat.svg");
   mask-image: url("../assets/asterisk-fat.svg");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-}
-
-section#contact .contact-socials div.heart {
-  background-color: var(--pastel-red);
-  width: 2rem;
-  aspect-ratio: 1/1;
-  margin-bottom: 0.2rem; /* HACK: debug middle baseline */
-
-  -webkit-mask-image: url("../assets/heart.svg");
-  mask-image: url("../assets/heart.svg");
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-}
-
-section#contact .contact-socials footer {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 /* Social links hover effect */
@@ -591,21 +548,29 @@ section#contact .contact-socials div:hover a::after {
   transform: scaleX(1);
 }
 
-section#contact .contact-socials div.asterisk-fat {
+section#contact .contact-socials .asterisk-fat {
   transition: transform 0.3s ease-out;
 }
 
-section#contact .contact-socials div:hover div.asterisk-fat {
+section#contact .contact-socials div:hover .asterisk-fat {
   transform: translateX(0.3em);
 }
 
-.email-container #copy-email-btn {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+section#contact .contact-socials .heart {
+  background-color: var(--pastel-red);
+  width: 2rem;
+  aspect-ratio: 1/1;
+  margin-bottom: 0.2rem; /* HACK: debug middle baseline */
+
+  -webkit-mask-image: url("../assets/heart.svg");
+  mask-image: url("../assets/heart.svg");
 }
 
-.email-container:hover #copy-email-btn {
-  opacity: 1;
+section#contact .contact-socials footer {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* Swipe Transition */
@@ -649,8 +614,8 @@ body.is-transitioning .swipe-transition-2 {
 }
 
 /* Color Inversion Styles */
-body.inverted section#landing > .container,
-body.inverted section#about > .container {
+body.inverted section#landing .container,
+body.inverted section#about .container {
   /* FIXME: different sections changing at different speeds */
   background-color: var(--dark-grey);
   color: var(--ice-blue);
@@ -665,13 +630,13 @@ body.inverted section#landing .hero-nav a {
   color: var(--ice-blue);
 }
 
-body.inverted section#about .skills-category ul .horizontal-line {
+body.inverted section#about .skills-category .horizontal-line {
   background-color: var(--darkish-grey);
 }
 
-body.inverted section#landing .hero-content div.asterisk-fat,
-body.inverted section#landing .hero-nav li div.asterisk-thin,
-body.inverted section#about .skills-category div.asterisk-fat,
+body.inverted section#landing .hero-content .asterisk-fat,
+body.inverted section#landing .hero-nav .asterisk-thin,
+body.inverted section#about .skills-category .asterisk-fat,
 body.inverted .scroll-down {
   background-color: var(--ice-blue);
 }
