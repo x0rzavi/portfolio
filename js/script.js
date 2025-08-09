@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navigator.clipboard
         .writeText(emailAddress.innerText)
         .then(() => {
-          copyBtn.innerText = "COPIED!";
+          copyBtn.innerText = "COPIED!"; // TODO: fade in text
           setTimeout(() => {
             copyBtn.innerText = "COPY";
           }, 2000); // Revert back after 2 seconds
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observerOptions = {
     root: null, // observes intersections relative to the viewport
-    rootMargin: "-80% 0px -20% 0px", // Triggers when the element enters a 20% band at the bottom of the viewport
+    rootMargin: "-60% 0px -60% 0px", // Triggers when the element enters a 60% band from the top of the viewport
     threshold: 0,
   };
 
