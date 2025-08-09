@@ -276,7 +276,6 @@ section#about .about-image-container {
 
 section#about .about-image-container .about-image {
   width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -424,13 +423,11 @@ section#projects .projects-card {
 
 section#projects .image-container {
   width: 100%; /* take as much space as possible, but show 2 cards */
-  height: auto;
   overflow: hidden;
 }
 
 section#projects .image-container img {
   width: 100%;
-  height: 100%;
   transition: transform 0.3s ease-out;
 }
 
@@ -442,6 +439,7 @@ section#projects .projects-info {
   display: flex;
   align-items: center;
   gap: 2rem;
+  font-size: 1.05rem;
 }
 
 section#projects .projects-name {
