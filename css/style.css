@@ -18,8 +18,10 @@
   --dark-grey: #272628;
   --light-grey: #dddddd;
   --pastel-orange: #ffcb7d;
+  --ice-blue: #99c5ff;
   --white: #f6efed;
   --status-pulse-green: #00bf63;
+  scroll-behavior: smooth;
   /* font-size: 75%; */
 }
 
@@ -376,4 +378,44 @@ section#contact .contact-socials footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Swipe Transition */
+.swipe-transition-1,
+.swipe-transition-2 {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transform: translateZ(0); /* Prevent scrolling with page */
+}
+
+.swipe-transition-1 {
+  background-color: var(--pastel-orange);
+}
+
+.swipe-transition-2 {
+  background-color: var(--ice-blue);
+}
+
+body.is-transitioning .swipe-transition-1 {
+  animation: swipe-up 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+body.is-transitioning .swipe-transition-2 {
+  animation: swipe-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards; /* 0.1s delay */
+}
+
+@keyframes swipe-up {
+  0% {
+    top: 100%;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
 }
