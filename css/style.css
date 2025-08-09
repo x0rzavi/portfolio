@@ -395,6 +395,36 @@ section#contact .contact-socials footer {
   gap: 0.5rem;
 }
 
+/* Social links hover effect */
+section#contact .contact-socials a {
+  position: relative;
+}
+
+section#contact .contact-socials a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--pastel-orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+section#contact .contact-socials div:hover a::after {
+  transform: scaleX(1);
+}
+
+section#contact .contact-socials img {
+  transition: transform 0.3s ease-out;
+}
+
+section#contact .contact-socials div:hover img {
+  transform: translateX(0.3em);
+}
+
 .email-container #copy-email-btn {
   opacity: 0;
   transition: opacity 0.3s ease;
