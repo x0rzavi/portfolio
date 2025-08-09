@@ -1,0 +1,229 @@
+/* style.css */
+@font-face {
+  font-family: "Nohemi Light";
+  src: url(../fonts/Nohemi-Light.woff2);
+}
+
+@font-face {
+  font-family: "Nohemi Regular";
+  src: url(../fonts/Nohemi-Regular.woff2);
+}
+
+@font-face {
+  font-family: "Nohemi SemiBold";
+  src: url(../fonts/Nohemi-SemiBold.woff2);
+}
+
+:root {
+  --dark-grey: #272628;
+  --pastel-orange: #ffcb7d;
+  --white: #f6efed;
+  --status-pulse-green: #00bf63;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family:
+    "Nohemi Light",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+section#landing > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem;
+  background-color: var(--white);
+}
+
+section#landing .hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+section#landing .hero-content h1 {
+  font-size: 8em;
+  letter-spacing: 0.4rem;
+  color: var(--dark-grey);
+}
+
+section#landing .hero-content img {
+  width: 2.5rem;
+  color: var(--dark-grey);
+}
+
+section#landing .hero-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  font-size: 2rem;
+}
+
+section#landing .hero-nav li {
+  display: flex;
+  align-items: center; /* FIXME: have middle baseline */
+}
+
+section#landing .hero-nav li img {
+  width: 2rem;
+  padding-right: 0.8rem;
+}
+
+section#landing .hero-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scroll-down {
+  width: 3rem;
+}
+
+section#landing .hero-status div {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.status-pulse {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--status-pulse-green);
+  border-radius: 50%;
+  position: relative; /* Needed for the ::before pseudo-element ripple */
+  animation: status-pulse-dot 2s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite;
+}
+
+/* The outer ripple effect */
+.status-pulse::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--status-pulse-green);
+  border-radius: 50%;
+  z-index: -1; /* Place it behind the main dot */
+  animation: status-pulse-ripple 2s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite;
+}
+
+/* Keyframes for the dot's breathing (scaling) */
+@keyframes status-pulse-dot {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(0.7);
+  }
+}
+
+/* Keyframes for the ripple (expanding shadow/element) */
+@keyframes status-pulse-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+section#about > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 12rem;
+  background-color: var(--white);
+}
+
+section#about .about-content {
+  display: flex;
+  gap: 8rem;
+  flex-wrap: wrap;
+}
+
+section#about .about-content > div > .about-image {
+  flex-basis: 400px;
+}
+
+section#about .about-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8rem;
+  font-size: 2rem;
+  flex-basis: 2rem;
+  flex-grow: 1;
+}
+
+section#about .skills-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-end;
+}
+
+section#about .about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 2rem 0;
+  justify-content: space-between;
+}
+
+section#about .skills-category {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: auto;
+}
+
+section#about .skills-category h3 {
+  font-size: 2rem;
+  border: 0.2rem solid var(--dark-grey);
+  padding: 0.6rem 1.8rem; /* pill look */
+  border-radius: 20rem; /* pill look */
+  text-align: center;
+}
+
+section#about .skills-category ul {
+  list-style: none;
+}
+
+section#about .skills-category li {
+  display: flex;
+  align-items: center; /* FIXME: have middle baseline */
+  gap: 0.5rem;
+  font-size: 2rem;
+  padding: 0.3rem 0;
+}
