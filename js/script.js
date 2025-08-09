@@ -58,18 +58,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observerOptions = {
     root: null, // observes intersections relative to the viewport
-    rootMargin: "-60% 0px -60% 0px", // Triggers when the element enters a 60% band from the top of the viewport
-    threshold: 0,
+    threshold: 0.2,
+    // rootMargin: "-60% 0px -60% 0px", // Triggers when the element enters a 60% band from the top of the viewport // FIXME: not working on firefox
   };
 
   if (projectsSection && landingSection) {
     const projectsObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        console.log(entry.target.id, entry.isIntersecting);
         if (!body.classList.contains("inverted")) {
           if (entry.target.id === "projects" && entry.isIntersecting) {
+            console.log("Entry");
             projectsSection.classList.add("projects-visible");
           }
           if (entry.target.id === "landing" && entry.isIntersecting) {
+            console.log("Exit");
             projectsSection.classList.remove("projects-visible");
           }
         }
