@@ -84,4 +84,8 @@
   :root {
     font-size: 65%;
   }
+
+  section#about .about-image-container {
+    width: 350px; /* FIXME: proper container sizing */
+  }
 }
