@@ -503,6 +503,7 @@ section#projects .image-container {
 
 section#projects .image-container img {
   width: 100%;
+  display: block; /* prevent container from resizing */
   transition: transform 0.3s ease-out;
 }
 
