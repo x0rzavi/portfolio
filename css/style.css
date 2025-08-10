@@ -302,6 +302,7 @@ section#about .about-description {
   flex-basis: 2rem;
   flex-grow: 1;
   line-height: 2.2rem;
+  letter-spacing: 0.05rem;
 }
 
 section#about .about-description .padded {
