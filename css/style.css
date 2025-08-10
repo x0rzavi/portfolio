@@ -301,6 +301,16 @@ section#about .about-description {
   font-size: 2rem;
   flex-basis: 2rem;
   flex-grow: 1;
+  line-height: 2.2rem;
+}
+
+section#about .about-description .padded {
+  padding-bottom: 2rem;
+}
+
+section#about .about-description strong {
+  font-family: "Nohemi Regular";
+  /* color: var(--ice-blue); */
 }
 
 section#about .skills-link {
@@ -308,6 +318,7 @@ section#about .skills-link {
   align-items: center;
   gap: 1.5rem;
   align-self: flex-end;
+  /* margin-top: 4rem; */
 }
 
 section#about .about-skills {
