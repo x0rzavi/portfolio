@@ -48,7 +48,8 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  background-color: var(--white);
+  background-color: var(--white); /* fix fine white line */
+  /* FIXME: fine white line at before contact section */
 }
 
 section {
@@ -465,7 +466,7 @@ section#about .skills-category li img {
 section#projects {
   background-color: var(--white);
   color: var(--pastel-orange);
-  transition: background-color 0.3s;
+  transition: background-color 0.8s;
 }
 
 section#projects.projects-visible {
