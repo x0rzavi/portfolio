@@ -34,11 +34,6 @@
     width: 100%;
   }
 
-  /* About me image tap/click effect */
-  section#about .about-image-container:active .about-image.color {
-    opacity: 1;
-  }
-
   section#about .about-description {
     gap: 4rem;
   }
@@ -58,11 +53,6 @@
 
   section#projects .projects-name {
     padding: 0.4rem 1rem; /* pill look */
-  }
-
-  /* Email copy button on click */
-  section#contact .email-container #copy-email-btn {
-    opacity: 1;
   }
 
   section#contact .container {

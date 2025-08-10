@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll swipe animations
   links.forEach((link) => {
-    link.addEventListener("click", function (e) {
+    link.addEventListener("click", function(e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
           copyBtn.innerText = "COPIED!"; // TODO: fade in text
           setTimeout(() => {
             copyBtn.innerText = "COPY";
-          }, 2000); // Revert back after 2 seconds
+          }, 3000); // Revert back after 2 seconds
         })
         .catch((err) => {
           console.error("Failed to copy text: ", err);
