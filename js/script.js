@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
           copyBtn.innerText = "COPIED!"; // TODO: fade in text
           setTimeout(() => {
             copyBtn.innerText = "COPY";
-          }, 3000); // Revert back after 2 seconds
+          }, 1000); // Revert back after 1 seconds
         })
         .catch((err) => {
           console.error("Failed to copy text: ", err);

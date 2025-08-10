@@ -367,6 +367,79 @@ section#about .skills-category li {
   gap: 0.5rem;
 }
 
+.skills-icon {
+  background-color: var(--dark-grey);
+  width: 2rem;
+  aspect-ratio: 1/1;
+  margin-bottom: 0.1rem; /* HACK: debug middle baseline */
+  transition: background-color 0.3s;
+}
+
+section#about .skills-category li .python {
+  -webkit-mask-image: url("../assets/catppuccin--python.svg");
+  mask-image: url("../assets/catppuccin--python.svg");
+}
+
+section#about .skills-category li .cpp {
+  -webkit-mask-image: url("../assets/catppuccin--cpp.svg");
+  mask-image: url("../assets/catppuccin--cpp.svg");
+}
+
+section#about .skills-category li .javascript {
+  -webkit-mask-image: url("../assets/catppuccin--javascript.svg");
+  mask-image: url("../assets/catppuccin--javascript.svg");
+}
+
+section#about .skills-category li .bash {
+  -webkit-mask-image: url("../assets/catppuccin--bash.svg");
+  mask-image: url("../assets/catppuccin--bash.svg");
+}
+
+section#about .skills-category li .django {
+  -webkit-mask-image: url("../assets/catppuccin--django.svg");
+  mask-image: url("../assets/catppuccin--django.svg");
+}
+
+section#about .skills-category li .flask {
+  -webkit-mask-image: url("../assets/devicon--flask.svg");
+  mask-image: url("../assets/devicon--flask.svg");
+}
+
+section#about .skills-category li .git {
+  -webkit-mask-image: url("../assets/catppuccin--git.svg");
+  mask-image: url("../assets/catppuccin--git.svg");
+}
+
+section#about .skills-category li .docker {
+  -webkit-mask-image: url("../assets/catppuccin--docker.svg");
+  mask-image: url("../assets/catppuccin--docker.svg");
+}
+
+section#about .skills-category li .gcp {
+  -webkit-mask-image: url("../assets/catppuccin--gcp.svg");
+  mask-image: url("../assets/catppuccin--gcp.svg");
+}
+
+section#about .skills-category li .linux {
+  -webkit-mask-image: url("../assets/fluent-mdl2--linux-logo-32.svg");
+  mask-image: url("../assets/fluent-mdl2--linux-logo-32.svg");
+}
+
+section#about .skills-category li .socket {
+  -webkit-mask-image: url("../assets/solar--socket-linear.svg");
+  mask-image: url("../assets/solar--socket-linear.svg");
+}
+
+section#about .skills-category li .buffer {
+  -webkit-mask-image: url("../assets/famicons--logo-buffer.svg");
+  mask-image: url("../assets/famicons--logo-buffer.svg");
+}
+
+section#about .skills-category li .pillow {
+  -webkit-mask-image: url("../assets/iconoir--pillow.svg");
+  mask-image: url("../assets/iconoir--pillow.svg");
+}
+
 section#about .skills-category li img {
   width: 2rem;
   padding-bottom: 0.2rem; /* HACK: debug middle baseline */
@@ -641,4 +714,8 @@ body.inverted section#landing .hero-nav .asterisk-thin,
 body.inverted section#about .skills-category .asterisk-fat,
 body.inverted .scroll-down {
   background-color: var(--ice-blue);
+}
+
+body.inverted .skills-icon {
+  background-color: var(--pastel-orange);
 }
