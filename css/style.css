@@ -65,7 +65,7 @@ section {
 section#landing .container {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 6rem;
   padding: 6rem;
   color: var(--dark-grey);
   background-color: var(--white);
@@ -102,6 +102,7 @@ section#landing .hero-content h1 {
 section#landing .hero-content .asterisk-fat {
   background-color: var(--dark-grey);
   width: 10rem;
+  min-width: 1rem;
   aspect-ratio: 1/1;
   transition:
     transform 0.3s,
@@ -275,7 +276,7 @@ section#about .about-image-container {
 }
 
 section#about .about-image-container .about-image {
-  width: 100%;
+  max-width: 100%;
   display: block;
 }
 
@@ -501,7 +502,6 @@ section#contact .contact-socials {
   display: flex;
   gap: 2.5rem;
   font-size: 2rem;
-  padding-bottom: 2rem;
 }
 
 section#contact .contact-socials > div {

@@ -1,0 +1,80 @@
+@media (max-width: 768px) {
+  :root {
+    font-size: 75%;
+  }
+
+  section#landing .container,
+  section#about .container,
+  section#projects .container,
+  section#contact .container {
+    padding: 2rem 2rem;
+  }
+
+  section#landing .container {
+    justify-content: space-between;
+    height: 90vh;
+  }
+
+  section#landing .hero-content h1 {
+    font-size: 3.5em;
+    letter-spacing: 0.2rem;
+    animation: fadeInUp 1s ease-in-out forwards;
+  }
+
+  section#about .about-content {
+    gap: 4rem;
+    padding: 0;
+  }
+
+  section#about .about-image-container {
+    width: 100%;
+  }
+
+  /* About me image tap/click effect */
+  section#about .about-image-container:active .about-image.color {
+    opacity: 1;
+  }
+
+  section#about .about-description {
+    gap: 4rem;
+  }
+
+  section#about .about-skills {
+    padding: 0;
+    gap: 3rem;
+  }
+
+  section#about .skills-category {
+    gap: 1rem;
+  }
+
+  section#projects .projects-info {
+    gap: 0.5rem;
+  }
+
+  section#projects .projects-name {
+    padding: 0.4rem 1rem; /* pill look */
+  }
+
+  /* Email copy button on click */
+  section#contact .email-container #copy-email-btn {
+    opacity: 1;
+  }
+
+  section#contact .container {
+    gap: 10rem;
+    justify-content: space-between;
+    height: 90vh;
+  }
+
+  section#contact .contact-socials {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
+  }
+
+  section#contact .contact-socials footer {
+    margin: 4rem 0 0 0;
+    align-self: center;
+  }
+}
