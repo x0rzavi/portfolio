@@ -21,6 +21,10 @@
     animation: fadeInUp 1s ease-in-out forwards;
   }
 
+  section#about .container {
+    padding-bottom: 4rem;
+  }
+
   section#about .about-content {
     gap: 4rem;
     padding: 0;
