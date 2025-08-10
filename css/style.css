@@ -83,13 +83,13 @@ section#landing .hero-content {
 section#landing .hero-content h1 {
   font-size: 8em;
   letter-spacing: 0.5rem;
-  animation: fadeInUp 1s ease-in-out forwards;
+  animation: fadeInUp 1s ease-in forwards;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 
   to {
@@ -101,7 +101,8 @@ section#landing .hero-content h1 {
 section#landing .hero-content .asterisk-fat {
   background-color: var(--dark-grey);
   width: 10rem;
-  min-width: 1rem;
+  max-width: 10rem;
+  min-width: 2rem;
   aspect-ratio: 1/1;
   transition:
     transform 0.3s,

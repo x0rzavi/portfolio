@@ -1,4 +1,5 @@
-@media (max-width: 768px) {
+@media (max-width: 48em) {
+  /* 768px / 16px = 48em */
   :root {
     font-size: 75%;
   }
@@ -21,12 +22,17 @@
     animation: fadeInUp 1s ease-in-out forwards;
   }
 
+  section#landing .hero-content .asterisk-fat {
+    max-width: 4rem;
+  }
+
   section#about .container {
     padding-bottom: 4rem;
   }
 
   section#about .about-content {
     gap: 4rem;
+    /* TODO: fix centering of about-content */
     padding: 0;
   }
 
@@ -70,5 +76,12 @@
   section#contact .contact-socials footer {
     margin: 4rem 0 0 0;
     align-self: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 100em) {
+  /* 1600px / 16px = 100em */
+  :root {
+    font-size: 65%;
   }
 }
