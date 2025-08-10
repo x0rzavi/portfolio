@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll swipe animations
   links.forEach((link) => {
-    link.addEventListener("click", function(e) {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
@@ -65,14 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (projectsSection && landingSection) {
     const projectsObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry.target.id, entry.isIntersecting);
         if (!body.classList.contains("inverted")) {
           if (entry.target.id === "projects" && entry.isIntersecting) {
-            console.log("Entry");
             projectsSection.classList.add("projects-visible");
           }
           if (entry.target.id === "landing" && entry.isIntersecting) {
-            console.log("Exit");
             projectsSection.classList.remove("projects-visible");
           }
         }

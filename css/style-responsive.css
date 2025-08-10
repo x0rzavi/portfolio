@@ -12,7 +12,7 @@
 
   section#landing .container {
     justify-content: space-between;
-    height: 90vh;
+    height: 80vh;
   }
 
   section#landing .hero-content h1 {
@@ -68,7 +68,7 @@
   section#contact .container {
     gap: 10rem;
     justify-content: space-between;
-    height: 90vh;
+    height: 80vh;
   }
 
   section#contact .contact-socials {

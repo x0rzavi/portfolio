@@ -580,6 +580,7 @@ section#contact .contact-socials footer {
   height: 100%;
   z-index: 100;
   transform: translateZ(0); /* Prevent scrolling with page */
+  visibility: hidden;
 }
 
 .swipe-transition-1 {
