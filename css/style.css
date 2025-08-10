@@ -167,7 +167,7 @@ section#landing .hero-nav .asterisk-thin {
   background-color: var(--dark-grey);
   width: 1.5rem;
   aspect-ratio: 1/1;
-  margin-bottom: 0.2rem; /* HACK: debug middle baseline */
+  margin-bottom: 0.4rem; /* HACK: debug middle baseline */
   transition: background-color 0.3s;
 
   -webkit-mask-image: url("../assets/asterisk-thin.svg");
@@ -339,7 +339,7 @@ section#about .skills-category .asterisk-fat {
   background-color: var(--dark-grey);
   width: 1.5rem;
   aspect-ratio: 1/1;
-  margin-bottom: 0.5rem; /* HACK: debug middle baseline */
+  margin-bottom: 0.4rem; /* HACK: debug middle baseline */
   transition: background-color 0.3s;
 
   -webkit-mask-image: url("../assets/asterisk-fat.svg");
