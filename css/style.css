@@ -310,7 +310,7 @@ section#about .about-description .padded {
 
 section#about .about-description strong {
   font-family: "Nohemi Regular";
-  /* color: var(--ice-blue); */
+  color: var(--darkish-grey);
 }
 
 section#about .skills-link {
@@ -414,6 +414,11 @@ section#about .skills-category li .django {
 section#about .skills-category li .flask {
   -webkit-mask-image: url("../assets/devicon--flask.svg");
   mask-image: url("../assets/devicon--flask.svg");
+}
+
+section#about .skills-category li .folder-tests {
+  -webkit-mask-image: url("../assets/catppuccin--folder-tests.svg");
+  mask-image: url("../assets/catppuccin--folder-tests.svg");
 }
 
 section#about .skills-category li .git {
@@ -730,4 +735,8 @@ body.inverted .scroll-down {
 
 body.inverted .skills-icon {
   background-color: var(--pastel-orange);
+}
+
+body.inverted section#about .about-description strong {
+  color: var(--light-grey);
 }
