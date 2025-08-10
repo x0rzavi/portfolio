@@ -48,6 +48,7 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  background-color: var(--white);
 }
 
 section {
