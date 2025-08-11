@@ -443,6 +443,11 @@ section#about .skills-category li .linux {
   mask-image: url("../assets/fluent-mdl2--linux-logo-32.svg");
 }
 
+section#about .skills-category li .cmake {
+  -webkit-mask-image: url("../assets/catppuccin--cmake.svg");
+  mask-image: url("../assets/catppuccin--cmake.svg");
+}
+
 section#about .skills-category li .socket {
   -webkit-mask-image: url("../assets/solar--socket-linear.svg");
   mask-image: url("../assets/solar--socket-linear.svg");
@@ -456,6 +461,11 @@ section#about .skills-category li .buffer {
 section#about .skills-category li .pillow {
   -webkit-mask-image: url("../assets/iconoir--pillow.svg");
   mask-image: url("../assets/iconoir--pillow.svg");
+}
+
+section#about .skills-category li .cli {
+  -webkit-mask-image: url("../assets/catppuccin--cli.svg");
+  mask-image: url("../assets/catppuccin--cli.svg");
 }
 
 section#about .skills-category li img {
