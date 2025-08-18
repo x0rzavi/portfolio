@@ -2,6 +2,10 @@
 
 A minimalist, responsive personal portfolio built with plain HTML, CSS, and JavaScript. It features smooth section swipe transitions, a dark-mode invert, animated accents, and masked SVG icons.
 
+## Preview
+
+https://github.com/user-attachments/assets/dc2b190a-6ca7-43e6-86fa-08178b2daf2f
+
 ## Structure
 
 - `index.html` — markup for Landing, About, Projects, Contact
@@ -9,7 +13,7 @@ A minimalist, responsive personal portfolio built with plain HTML, CSS, and Java
 - `css/style-responsive.css` — responsive rules and breakpoints
 - `js/script.js` — smooth swipe-scroll, IntersectionObserver, dark-mode toggle, copy-email dynamic button revealer
 - `assets/` — images and SVGs referenced by HTML/CSS
-- `fonts/` — Nohemi *.woff2 referenced by CSS
+- `fonts/` — Nohemi \*.woff2 referenced by CSS
 
 ## Features
 
