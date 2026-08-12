@@ -22,6 +22,9 @@
   --white: #f6efed;
   --pastel-red: #ff7d7d;
   --status-pulse-green: #00bf63;
+  --font-body:
+    "Nohemi Light", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -35,19 +38,7 @@ a {
 }
 
 body {
-  font-family:
-    "Nohemi Light",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-body);
   background-color: var(--white); /* fix fine white line */
   /* FIXME: fine white line at before contact section */
 }
@@ -583,12 +574,16 @@ section#contact .contact-header div {
 }
 
 section#contact .contact-header #copy-email-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border: 0.2rem solid var(--pastel-orange);
   padding: 0.6rem 1.8rem; /* pill look */
   border-radius: 20rem; /* pill look */
   background-color: var(--dark-grey);
   color: var(--pastel-orange);
   font-size: 1.2rem;
+  font-family: var(--font-body);
 }
 
 /* Dynamic email copy button */
