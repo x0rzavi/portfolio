@@ -76,9 +76,23 @@ section#landing .hero-content {
 }
 
 section#landing .hero-content h1 {
-  font-size: 8em;
+  font-size: 8rem;
   letter-spacing: 0.5rem;
   animation: fadeInUp 1s ease-in forwards;
+  line-height: 9.4rem;
+}
+
+section#landing .hero-content .name {
+  color: var(--dark-grey);
+  background-color: var(--ice-blue);
+  border: 0.1em solid var(--dark-grey);
+  padding: 1.2rem 2rem 0.1rem; /* pill look */
+  border-radius: 20rem; /* pill look */
+  margin-left: -1rem;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s;
 }
 
 @keyframes fadeInUp {
@@ -132,6 +146,7 @@ section#landing .hero-nav li {
   display: flex;
   align-items: center;
   font-size: 2rem;
+  font-weight: bold;
   gap: 0.8rem;
 }
 
@@ -162,7 +177,7 @@ section#landing .hero-nav .asterisk-thin {
   background-color: var(--dark-grey);
   width: 1.5rem;
   aspect-ratio: 1/1;
-  margin-bottom: 0.25rem; /* HACK: debug middle baseline */
+  margin-bottom: 0.35rem; /* HACK: debug middle baseline */
   transition: background-color 0.3s;
 
   -webkit-mask-image: url("../assets/asterisk-thin.svg");
@@ -582,6 +597,7 @@ section#contact .container {
 section#contact .contact-header h1 {
   font-size: 6rem;
   color: var(--ice-blue);
+  margin-left: -0.4rem;
 }
 
 section#contact .contact-header div {
@@ -765,4 +781,10 @@ body.inverted .skills-icon {
 
 body.inverted section#about .about-description strong {
   color: var(--light-grey);
+}
+
+body.inverted section#landing .hero-content .name {
+  background-color: var(--dark-grey);
+  color: var(--pastel-orange);
+  border-color: var(--pastel-orange);
 }
