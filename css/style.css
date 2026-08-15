@@ -110,7 +110,7 @@ section#landing .hero-content .name {
 section#landing .hero-content .asterisk-fat {
   background-color: var(--dark-grey);
   width: 10rem;
-  max-width: 10rem;
+  max-width: 6rem;
   min-width: 2rem;
   aspect-ratio: 1/1;
   transition:

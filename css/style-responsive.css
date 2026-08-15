@@ -30,7 +30,7 @@
   }
 
   section#landing .hero-content .asterisk-fat {
-    max-width: 4rem;
+    max-width: 3rem;
   }
 
   section#about .container {
@@ -99,5 +99,9 @@
 
   section#about .about-image-container {
     width: 350px; /* FIXME: proper container sizing */
+  }
+
+  section#landing .hero-content .asterisk-fat {
+    max-width: 4rem;
   }
 }
