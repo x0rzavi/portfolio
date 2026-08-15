@@ -98,7 +98,7 @@
   }
 
   section#about .about-image-container {
-    width: 350px; /* FIXME: proper container sizing */
+    max-width: 350px;
   }
 
   section#landing .hero-content .asterisk-fat {

@@ -289,7 +289,8 @@ section#about .about-image-container {
   position: relative;
   flex-shrink: 0;
   align-self: flex-start;
-  width: 450px;
+  width: fit-content;
+  max-width: 450px;
 }
 
 section#about .about-image-container .about-image {
