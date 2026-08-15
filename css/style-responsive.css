@@ -55,11 +55,12 @@
   }
 
   section#projects .projects-info {
-    gap: 0.5rem;
+    gap: 0.8rem;
+    align-items: center;
   }
 
   section#projects .projects-name {
-    padding: 0.4rem 1rem; /* pill look */
+    padding: 0.6rem 0.6rem 0.4rem; /* pill look */
   }
 
   section#contact .container {

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navigator.clipboard
         .writeText(emailAddress.innerText)
         .then(() => {
-          copyBtn.innerText = "COPIED!"; // TODO: fade in text
+          copyBtn.innerText = "COPIED!"; // TODO: fade-in text
           setTimeout(() => {
             copyBtn.innerText = "COPY";
           }, 1000); // Revert back after 1 seconds
@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const observerOptions = {
     root: null, // observes intersections relative to the viewport
     threshold: 0.2,
-    // rootMargin: "-60% 0px -60% 0px", // Triggers when the element enters a 60% band from the top of the viewport // FIXME: not working on firefox
+    // rootMargin: "-60% 0px -60% 0px", // Triggers when the element enters a 60% band from the top of the viewport
+    // FIXME: not working on firefox
   };
 
   if (projectsSection && landingSection) {
