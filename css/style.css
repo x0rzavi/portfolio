@@ -538,7 +538,7 @@ section#projects .projects-card-container {
   width: 100%;
 }
 
-section#projects .projects-card-container:first-child {
+section#projects .projects-card-container:not(:last-child) {
   padding-bottom: 6rem;
 }
 
@@ -569,6 +569,7 @@ section#projects .projects-info {
   align-items: baseline;
   gap: 2rem;
   font-size: 1.05rem;
+  line-height: 1.4rem;
 }
 
 section#projects .projects-name {
@@ -576,6 +577,7 @@ section#projects .projects-name {
   padding: 0.8rem 1rem 0.4rem; /* pill look */
   border-radius: 20rem; /* pill look */
   text-align: center;
+  line-height: 1.4rem;
 }
 
 section#projects .projects-year {
@@ -676,7 +678,7 @@ section#contact .contact-socials a::after {
   transition: transform 0.3s ease-out;
 }
 
-section#contact .contact-socials div:hover a::after {
+section#contact .contact-socials a:hover::after {
   transform: scaleX(1);
 }
 
