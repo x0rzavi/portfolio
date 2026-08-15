@@ -265,6 +265,7 @@ section#about .about-content {
 section#about .about-image-container {
   position: relative;
   flex-shrink: 0;
+  align-self: flex-start;
   width: 450px;
 }
 
