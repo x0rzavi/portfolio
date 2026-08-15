@@ -71,8 +71,12 @@ section#landing .hero-content {
   gap: 5rem;
 }
 
+section#landing {
+  --hero-nav-font-size: clamp(1rem, 0.5rem + 1.5vw, 2rem);
+}
+
 section#landing .hero-content h1 {
-  font-size: 8em;
+  font-size: calc(var(--hero-nav-font-size) * 4.5);
   letter-spacing: 0.5rem;
   animation: fadeInUp 1s ease-in forwards;
 }
@@ -127,7 +131,7 @@ section#landing .hero-nav {
 section#landing .hero-nav li {
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: var(--hero-nav-font-size);
   gap: 0.8rem;
 }
 
