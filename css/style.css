@@ -39,8 +39,7 @@ a {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--white); /* fix fine white line */
-  /* FIXME: fine white line at before contact section */
+  background-color: var(--dark-grey);
 }
 
 section {
@@ -251,6 +250,9 @@ section#about .container {
   padding: 2rem 4rem;
   background-color: var(--white);
   color: var(--dark-grey);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 section#about .about-content {
@@ -468,7 +470,7 @@ section#about .skills-category li img {
 section#projects {
   background-color: var(--white);
   color: var(--pastel-orange);
-  transition: background-color 0.8s;
+  transition: background-color 0.3s;
 }
 
 section#projects.projects-visible {
@@ -716,7 +718,6 @@ body.is-transitioning .swipe-transition-2 {
 /* Color Inversion Styles */
 body.inverted section#landing .container,
 body.inverted section#about .container {
-  /* FIXME: different sections changing at different speeds */
   background-color: var(--dark-grey);
   color: var(--ice-blue);
 }
