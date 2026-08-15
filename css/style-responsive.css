@@ -21,12 +21,11 @@
     font-size: 3.5em;
     letter-spacing: 0.2rem;
     animation: fadeInUp 1s ease-in-out forwards;
-    line-height: 4.6rem;
   }
 
   section#landing .hero-content .name {
-    padding: 0.8rem 1.2rem 0.2rem; /* pill look */
-    margin-left: -0.6rem;
+    padding: 0 0.2rem 0 0.4rem;
+    margin: 0 -0.2rem 0 -0.4rem;
   }
 
   section#landing .hero-content .asterisk-fat {

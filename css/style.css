@@ -79,20 +79,30 @@ section#landing .hero-content h1 {
   font-size: 8rem;
   letter-spacing: 0.5rem;
   animation: fadeInUp 1s ease-in forwards;
-  line-height: 9.4rem;
+}
+
+@property --highlight-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #99c5ff;
 }
 
 section#landing .hero-content .name {
+  --highlight-color: var(--ice-blue);
   color: var(--dark-grey);
-  background-color: var(--ice-blue);
-  border: 0.1em solid var(--dark-grey);
-  padding: 1.2rem 2rem 0.1rem; /* pill look */
-  border-radius: 20rem; /* pill look */
-  margin-left: -1rem;
+  background-image: linear-gradient(
+    100deg,
+    var(--highlight-color) 0%,
+    var(--highlight-color) 100%
+  ); /* highlighter ink look */
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  padding: 0 0.8rem 0 1rem;
+  margin: 0 -0.8rem 0 -1rem;
   transition:
-    background-color 0.3s,
-    color 0.3s,
-    border-color 0.3s;
+    --highlight-color 0.3s,
+    color 0.3s;
 }
 
 @keyframes fadeInUp {
@@ -787,7 +797,6 @@ body.inverted section#about .about-description strong {
 }
 
 body.inverted section#landing .hero-content .name {
-  background-color: var(--dark-grey);
+  --highlight-color: color-mix(in srgb, var(--ice-blue) 85%, transparent);
   color: var(--pastel-orange);
-  border-color: var(--pastel-orange);
 }
