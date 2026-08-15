@@ -42,6 +42,10 @@ body {
   background-color: var(--dark-grey);
 }
 
+section:not(:first-child) {
+  margin-top: -1px;
+}
+
 section {
   /* make each section cover full page */
   min-height: 100vh;
